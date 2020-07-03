@@ -28,7 +28,7 @@ export class ProductDetailComponent implements OnInit {
     //   "imageUrl": "assets/images/leaf_rake.png"
     // }
     this.productService.getProduct(id).subscribe({
-      next: product => this.product = product,
+      next: product => this.product = product[0],
       error: err => this.errorMessage = err,
     });
   }
