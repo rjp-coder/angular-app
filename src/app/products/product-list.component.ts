@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit {
     constructor(private productService: ProductService) {
 
     }
-    pageTitle: string = 'Product List::';
+    pageTitle: string = 'Product List:';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
