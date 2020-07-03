@@ -20,10 +20,10 @@ export class ProductService {
         );
     }
 
-    getProduct(id): Observable<IProduct[]> {
+    getProduct(id): Observable<IProduct> {
         return this.http.get<IProduct[]>(this.productUrl).pipe(
             catchError(this.handleError),
-            map(x => x.filter(y=>y.productId==id)),
+            map(x => x.filter(y=>y.productId==id)[0]),
             tap(data => console.log('ID: ' + id + 'HAA:' + JSON.stringify(data)))
             );
     }

@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class='row'>
-        <div class='col-md-6'>
+        <div class='col-md-6' *ngIf='listFilter'>
             <h4>Filtered by: {{listFilter}}</h4>
         </div>
     </div>
@@ -24,7 +24,7 @@
                     <th>
                         <button class='btn  btn-primary'
                         (click)='toggleImage()'>
-                            {{(showImage ? 'Hide':'Show') + ' Image'}}
+                            {{(showImage ? 'Hide':'Show') + ' Images'}}
                         </button>
                     </th>
                     <th>Product</th>
